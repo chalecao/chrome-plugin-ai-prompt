@@ -1,0 +1,48 @@
+/* 侧边栏样式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #333;
+    z-index: 9999;
+}
+
+/* 选项卡样式 */
+.tab {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-left: solid 3px #333;
+    text-align: center;
+    line-height: 50px;
+    color: #999;
+    font-size: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* 选项卡选中样式 */
+.tab.active {
+    border-left-color: #fff;
+    color: #fff;
+}
+
+/* container样式 */
+.container {
+    display: none;
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+}
+
+.container-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
