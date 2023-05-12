@@ -1,5 +1,9 @@
+body {
+    padding-left: 50px;
+}
+
 /* 侧边栏样式 */
-.sidebar {
+.chrome-plugin-gpt-prompt-sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +14,7 @@
 }
 
 /* 选项卡样式 */
-.tab {
+.chrome-plugin-gpt-prompt-tab {
     width: 50px;
     height: 50px;
     background-color: #333;
@@ -23,133 +27,156 @@
     box-sizing: border-box;
 }
 
-.tab>svg {
+.chrome-plugin-gpt-prompt-tab>svg {
     width: 36px;
 }
 
 /* 选项卡选中样式 */
-.tab.active {
+.chrome-plugin-gpt-prompt-tab.active {
     border-left-color: #fff;
     color: #fff;
 }
 
-.tab:last-child {
+.chrome-plugin-gpt-prompt-tab:last-child {
     bottom: 0;
     position: fixed;
 }
 
 /* container样式 */
-.container {
+.chrome-plugin-gpt-prompt-container {
     display: none;
     margin-left: 50px;
     width: calc(100% - 50px);
     height: 100%;
     box-sizing: border-box;
     padding: 0;
-    position: absolute;
+    position: fixed;
     background: #ccc;
-    z-index: 1;
+    z-index: 999;
     font-size: 14px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
 }
 
-.container-iframe {
+.chrome-plugin-gpt-prompt-container-iframe {
     border: none;
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.left-col {
+.chrome-plugin-gpt-prompt-left-col {
     padding: 10px;
 }
 
-.left-col,
-.right-col {
+.chrome-plugin-gpt-prompt-left-col,
+.chrome-plugin-gpt-prompt-right-col {
     box-sizing: border-box;
     font-size: 14px;
     height: 100%;
 }
 
-.left-col {
+.chrome-plugin-gpt-prompt-left-col {
     width: 300px;
 }
 
-.left-row-left {
+.chrome-plugin-gpt-prompt-left-row-left {
     width: 200px;
 }
 
-.left-row-right {
+.chrome-plugin-gpt-prompt-left-row-right {
     width: 50px;
     display: flex;
     align-items: center;
 }
 
-.left-row:not(:first-child) {
+.chrome-plugin-gpt-prompt-left-row:not(:first-child) {
     margin-top: 10px;
 }
 
-.left-row-header {
+.chrome-plugin-gpt-prompt-left-row-header {
     display: flex;
     justify-content: space-between;
 }
 
-.label {
+.chrome-plugin-gpt-prompt-label {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-select {
-    display: block;
-    appearance: none;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    padding: 5px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
+.chrome-plugin-gpt-prompt-title {
     width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-    cursor: pointer;
-    outline: none;
+    text-align: center;
+    color: #999;
+    font-size: 50px;
+    margin-top: 50px;
 }
 
-select:hover,
-select:focus {
-    border-color: #0080ff;
+.chrome-plugin-gpt-prompt-title>svg {
+    width: 80px;
+    height: 80px;
 }
 
-select option {
-    background-color: #fff;
-    color: #000;
+.chrome-plugin-gpt-prompt-title.active {
+    color: #eee;
+    text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff, 0 0 100px #0ebeff, 0 0 200px #0ebeff;
 }
 
-.textarea {
+.chrome-plugin-gpt-prompt-title>span {
+    margin-right: 20px;
+    animation-name: chrome-plugin-gpt-prompt-flicker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+}
+
+.chrome-plugin-gpt-prompt-title>#title-0 {
+    animation-delay: .2s;
+}
+
+.chrome-plugin-gpt-prompt-title>#title-1 {
+    animation-delay: .4s;
+}
+
+.chrome-plugin-gpt-prompt-title>#title-2 {
+    animation-delay: .6s;
+}
+
+.chrome-plugin-gpt-prompt-title>#title-3 {
+    animation-delay: .8s;
+}
+
+@keyframes chrome-plugin-gpt-prompt-flicker {
+    0% {
+        color: #333;
+    }
+
+    5%,
+    15%,
+    25%,
+    30%,
+    100% {
+        color: #eee;
+        text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff, 0 0 100px #0ebeff, 0 0 200px #0ebeff;
+    }
+
+    10%,
+    20% {
+        color: #333;
+        text-shadow: none;
+    }
+}
+
+.chrome-plugin-gpt-prompt-desc {
     width: 100%;
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+    text-align: center;
+    color: #ccc;
+    font-size: 24px;
+    margin-top: 50px;
 }
 
-textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    resize: none;
-    outline: none;
-    transition: box-shadow 0.3s ease;
-}
-
-textarea:focus {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.right-col {
-    background-color: #f5f5f5;
+.chrome-plugin-gpt-prompt-desc:nth-child(2) {
+    margin-top: 20px;
 }
