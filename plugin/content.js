@@ -206,14 +206,15 @@ function makeContainer(i) {
 
 function addTabEvt(tab) {
     // 点击选项卡切换container
-    tab.addEventListener('click', function () {
+    tab.addEventListener('click', function (e) {
+        e.stopImmediatePropagation();
         var index = this.getAttribute('data-index');
-        setActiveTab(index);
         var containers = document.querySelectorAll(`.${clsprefix}-container`);
         currentContainer = containers[index];
         if (currentContainer.childNodes.length < 1) {
             setContainer(currentContainer, index);
         }
+        setActiveTab(index);
     });
 }
 
@@ -229,9 +230,10 @@ for (var i = 0; i < tabs.length; i++) {
     containers.appendChild(container);
 
     if (tabs[i] === addTab) {
-        tab.addEventListener('click', function () {
+        tab.addEventListener('click', function (e) {
+            e.stopImmediatePropagation();
             var sidebarLatest = document.querySelector(`.${clsprefix}-sidebar`);
-            var containersLatest = document.querySelector(`#containers`);
+            var containersLatest = document.querySelector(`.${clsprefix}-containers`);
             var idx = sidebarLatest.childNodes.length - 2;
             var newtab = makeTab(idx, idx);
 
@@ -273,6 +275,7 @@ function setActiveTab(index) {
     var tabs = document.querySelectorAll(`.${clsprefix}-tab`);
     var containers = document.querySelectorAll(`.${clsprefix}-container`);
 
+    console.log('setActiveTab', index);
     if (tabs[index].classList.contains('active')) {
         tabs[index].classList.remove('active');
         containers[index].style.display = 'none';
@@ -282,7 +285,6 @@ function setActiveTab(index) {
             tabs[i].classList.remove('active');
             containers[i].style.display = 'none';
         }
-
         // 设置当前选中的选项卡和对应的container
         tabs[index].classList.add('active');
         containers[index].style.display = index > 0 ? 'flex' : 'block';
@@ -403,6 +405,7 @@ function setContainer(container, index) {
     leftRow1Desc.textContent = getDescMap()[leftRow1Select.value];
 
     button.addEventListener('click', e => {
+        e.stopImmediatePropagation();
         leftCol.querySelector(`.${clsprefix}-ouput-cont`).innerHTML = makePrompt({
             role: leftCol.querySelector(`.${clsprefix}-role`).value,
             demand: leftCol.querySelector(`.${clsprefix}-demand`).value,
@@ -411,6 +414,7 @@ function setContainer(container, index) {
     });
 
     leftRow1Select.addEventListener('change', e => {
+        e.stopImmediatePropagation();
         leftRow1Desc.textContent = getDescMap()[e.target.value];
         leftRow1Right.innerHTML = iconMap[e.target.value];
         leftRow1Right.appendChild(leftRow1Desc);
@@ -507,6 +511,7 @@ function setSetting(container) {
     </div>
     `;
     set.querySelector(`.${clsprefix}-form-check-switch`).addEventListener('change', e => {
+        e.stopImmediatePropagation();
         if (e.target.checked) {
             localStorage.setItem(`${clsprefix}-lang`, 'chinese');
         } else {
@@ -520,4 +525,7 @@ function setSetting(container) {
 document.addEventListener('click', e => {
     var containers = document.querySelectorAll(`.${clsprefix}-container`);
     containers[0].style.display = 'none';
+
+    var tabs = document.querySelectorAll(`.${clsprefix}-tab`);
+    tabs[0].classList.remove('active');
 })
