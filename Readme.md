@@ -28,7 +28,7 @@ You can install the AI Prompter plugin in the following ways:
 ## How to use
 Click plug-in to start using, in the left menu.
 
-![](./static/images/posts/2023-05-13-16-30-50.png)
+<iframe src="https://chalecao.github.io/chrome-plugin-ai-prompt/"  style="border:0;width:100%;height:400px;"/>
 
 Functional characteristics
 - Supports a variety of AI prompt types, including text summary, code generation, local knowledge, AI bots, etc
