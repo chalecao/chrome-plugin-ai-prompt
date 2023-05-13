@@ -3,7 +3,7 @@ Chromeplugin-ai-prompt is a Chrome plugin that can help you generate more effect
 
 [Try Demo](https://chalecao.github.io/chrome-plugin-ai-prompt/)
 
-Propmt solution for plug-in implementation Refer To:
+Propmt solution for plug-in implementation refer following course:
 
 ChatGPT Prompt Engineering for Developers -- Chinese version of Ng's Chatgpt Prompt Engineering for Developers course, which teaches developers how to build Prompt and new LLM-based applications based on the OpenAI API, including:
 
