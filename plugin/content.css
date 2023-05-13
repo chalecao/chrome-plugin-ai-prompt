@@ -365,7 +365,7 @@ body {
     color: #ccc;
     font-size: 24px;
     margin-top: 50px;
-    padding-left: 20px;
+    padding: 0 10px;
 }
 
 .chrome-plugin-gpt-prompt-desc>small {
