@@ -1,48 +1,47 @@
-## AI Prompt - Chrome浏览器插件
-chrome-plugin-ai-prompt是一款能够帮助你生成更有效的AI提示的Chrome浏览器插件。它可以为你在日常的工作、学习中提供更加智能且高效的助手，帮助你提升利用AI的工作效率和学习效果。
+## AI Prompt - Chrome plugin
+Chromeplugin-ai-prompt is a Chrome plugin that can help you generate more effective ai prompts. It can provide you with more intelligent and efficient assistants in your daily work and study, and help you improve your work efficiency and learning effect by using AI.
 
-Propmt 参考教程：
+Propmt solution for plug-in implementation Refer To:
 
-吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
+ChatGPT Prompt Engineering for Developers -- Chinese version of Ng's Chatgpt Prompt Engineering for Developers course, which teaches developers how to build Prompt and new LLM-based applications based on the OpenAI API, including:
 
-> 书写 Prompt 的原则;
-> 文本总结（如总结用户评论）；
-> 文本推断（如情感分类、主题提取）；
-> 文本转换（如翻译、自动纠错）；
-> 扩展（如书写邮件）;
+> Writing Prompt principle;
+> Text summary (e.g. summarizing user comments);
+Text inference (e.g., emotion classification, topic extraction);
+> Text conversion (e.g. translation, autocorrect);
+> Extension (e.g. writing an email);
 
-**英文原版地址：[ChatGPT Prompt Engineering for Developers](https://learn.deeplearning.ai)**
+* * the original English address: [ChatGPT Prompt Engineering for Developers] (https://learn.deeplearning.ai) * *
 
-**中文字幕视频地址：[吴恩达 x OpenAI的Prompt Engineering课程专业翻译版](https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web)**
+** Video Address with Chinese subtitles: [Wu En Prompt Engineering course specialized translation version of x OpenAI] (https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web) * *
 
-**中英双语字幕下载：[《ChatGPT提示工程》非官方版中英双语字幕](https://github.com/GitHubDaily/ChatGPT-Prompt-Engineering-for-Developers-in-Chinese)**
+[中文版本 Readme](./Readme_zh.md)
 
+## Install the plug-in
+You can install the AI Prompter plugin in the following ways:
 
-## 安装插件
-你可以通过以下方式安装AI Prompter插件：
+1. Open the Developer mode of the Chrome extension. In the upper right corner of the extension page, click the Developer Mode switch and turn it on.
+2. Open <chrome://extensions/>
+3. Click "Load unzipped Extension" in the upper left corner.
+4. git clone this project, select the plugin directory in this project folder, and open it
 
-1. 打开Chrome扩展程序的开发者模式，在扩展程序页面的右上角找到“开发者模式”开关，将其打开。
-2. chrome 浏览器 打开 <chrome://extensions/>
-3. 点击左上角“加载已解压扩展程序”
-4. 选择本项目文件夹下的plugin目录，打开即可
+How to use ##
+Click plug-in to start using, in the left menu
 
-## 如何使用
-点击插件开启使用，在左侧菜单中
+! [](./static/images/posts/2023-05-13-16-30-50.png)
 
-![](./static/images/posts/2023-05-13-16-30-50.png)
+Functional characteristics
+- Supports a variety of AI prompt types, including text summary, code generation, local knowledge, AI bots, etc
+- Provide rich AI prompt cases to meet the requirements of different usage scenarios
+- Support for custom AI prompts to make your work more efficient
+- Can be integrated with other tools and applications to extend usage scenarios
 
-功能特点
-- 支持多种AI提示类型，包括文本总结、代码生成、本地知识、AI机器人等
-- 提供丰富的AI提示案例，满足不同的使用场景需求
-- 支持自定义AI提示，让你的工作更加高效
-- 可以与其他工具和应用程序集成，扩展使用场景
-  
 ## todo list
-- 增加在线AI预览
-- 保存历史Prompts
+- Added online AI previews
+- Save historical Prompts
 
-## 开发者信息
-AI Prompter是一款开源的Chrome浏览器插件，代码托管在Github上。欢迎大家一起来贡献代码，为更多人提供帮助。
+## Developer information
+The AI Prompter is an open source Chrome plugin with code hosted on Github. Everyone is welcome to contribute code to help more people.
 
-## 许可证
+## License
 MIT
