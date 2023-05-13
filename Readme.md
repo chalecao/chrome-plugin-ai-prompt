@@ -1,7 +1,7 @@
 ## AI Prompt - Chrome plugin
 Chromeplugin-ai-prompt is a Chrome plugin that can help you generate more effective ai prompts. It can provide you with more intelligent and efficient assistants in your daily work and study, and help you improve your work efficiency and learning effect by using AI.
 
-[Try Demo](https://chalecao.github.io/chrome-plugin-ai-prompt/)
+[Try Online Demo](https://chalecao.github.io/chrome-plugin-ai-prompt/)
 
 Propmt solution for plug-in implementation refer following course:
 
