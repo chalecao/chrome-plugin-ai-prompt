@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Effective GPT Prompts",
     "version": "1.0",
     "description": "This is a Chrome extension for write more effective GPT prompts",
@@ -17,6 +17,13 @@
         }
     ],
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "bookmarks"
+    ],
+    "optional_permissions": [
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+        "*://*/*"
     ]
 }
