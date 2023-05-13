@@ -501,7 +501,7 @@ function setIntro(container) {
             <br/>
             <p>Rule2: Give model time to think</p>
             <small>- Specify the step to complete a task</small>
-            <small>- Instruct the model to work out its own solution before rushing to a conclution</small>
+            <small>- Instruct the model to work out its own solution before rushing to a conclusion</small>
             <br/>
             <p>Rule3: Reduce hallucinations</p>
             <small>- First find relevant information, then answer the question based on the information, if don’t know just say I don’t know</small>
