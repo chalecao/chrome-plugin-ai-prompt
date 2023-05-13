@@ -315,7 +315,7 @@ function makeOutput(text) {
     output.innerHTML = `
         <div class="${clsprefix}-ouput-head">
             <span>${text}</span>
-            ${icons['clipboard']}
+            <span class="${clsprefix}-clipboard">${icons['clipboard']}<span style="display:none">copied!</span></span>
         </div>
         <div class="${clsprefix}-ouput-cont" contenteditable="true">
         
@@ -403,7 +403,15 @@ function setContainer(container, index) {
     leftCol.appendChild(button);
     leftCol.appendChild(makeOutput('Effective AI Prompts：'));
     leftRow1Desc.textContent = getDescMap()[leftRow1Select.value];
+    leftCol.querySelector(`.${clsprefix}-clipboard`).addEventListener('click', e => {
+        e.stopImmediatePropagation();
+        leftCol.querySelector(`.${clsprefix}-clipboard`).lastChild.style.display = 'inline';
+        navigator.clipboard.writeText(leftCol.querySelector(`.${clsprefix}-ouput-cont`).innerText);
+        setTimeout(() => {
+            leftCol.querySelector(`.${clsprefix}-clipboard`).lastChild.style.display = 'none';
+        }, 2e3);
 
+    });
     button.addEventListener('click', e => {
         e.stopImmediatePropagation();
         leftCol.querySelector(`.${clsprefix}-ouput-cont`).innerHTML = makePrompt({

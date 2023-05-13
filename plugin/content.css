@@ -574,7 +574,7 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
     outline-color: var(--chrome-plugin-gpt-prompt-body-color);
 }
 
-.chrome-plugin-gpt-prompt-ouput-head>svg {
+.chrome-plugin-gpt-prompt-ouput-head svg {
     width: 20px;
     height: 20px;
     float: right;
@@ -582,7 +582,7 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
     cursor: pointer;
 }
 
-.chrome-plugin-gpt-prompt-ouput-head>svg:hover {
+.chrome-plugin-gpt-prompt-ouput-head svg:hover {
     fill: var(--chrome-plugin-gpt-prompt-link-color);
 }
 
