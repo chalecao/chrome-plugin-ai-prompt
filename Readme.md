@@ -1,5 +1,5 @@
 ## AI Prompter - Chrome浏览器插件
-![](/static/images/posts/2023-05-13-16-32-46.png)
+![](./static/images/posts/2023-05-13-16-32-46.png)
 
 AI Prompter是一款能够帮助你生成更有效的AI提示的Chrome浏览器插件。它可以为你在日常的工作、学习中提供更加智能且高效的助手，帮助你提升利用AI的工作效率和学习效果。
 
@@ -31,7 +31,7 @@ Propmt 参考教程：
 ## 如何使用
 点击插件开启使用，在左侧菜单中
 
-![](/static/images/posts/2023-05-13-16-30-50.png)
+![](./static/images/posts/2023-05-13-16-30-50.png)
 
 功能特点
 - 支持多种AI提示类型，包括文本总结、代码生成、本地知识、AI机器人等
