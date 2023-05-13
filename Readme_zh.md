@@ -1,6 +1,8 @@
 ## AI Prompt - Chrome浏览器插件
 chrome-plugin-ai-prompt是一款能够帮助你生成更有效的AI提示的Chrome浏览器插件。它可以为你在日常的工作、学习中提供更加智能且高效的助手，帮助你提升利用AI的工作效率和学习效果。
 
+[在线Demo](https://chalecao.github.io/chrome-plugin-ai-prompt/)
+
 插件实现的 Propmt 方案参考教程：
 
 吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版，主要内容为指导开发者如何构建 Prompt 并基于 OpenAI API 构建新的、基于 LLM 的应用，包括：
