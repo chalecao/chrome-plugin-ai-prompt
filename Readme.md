@@ -25,8 +25,8 @@ You can install the AI Prompter plugin in the following ways:
 3. Click "Load unzipped Extension" in the upper left corner.
 4. git clone this project, select the plugin directory in this project folder, and open it
 
-How to use ##
-Click plug-in to start using, in the left menu
+## How to use
+Click plug-in to start using, in the left menu.
 
 ![](./static/images/posts/2023-05-13-16-30-50.png)
 

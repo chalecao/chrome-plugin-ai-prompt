@@ -208,6 +208,7 @@ body {
     border-left-color: #fff;
     color: #fff;
 }
+
 .chrome-plugin-gpt-prompt-tab.active>svg {
     fill: #fff;
 }
@@ -366,6 +367,7 @@ body {
     font-size: 24px;
     margin-top: 50px;
     padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .chrome-plugin-gpt-prompt-desc>small {
@@ -597,20 +599,56 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.chrome-plugin-gpt-prompt-form-item>a {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff, 0 0 100px #0ebeff, 0 0 200px #0ebeff;
+    animation: zy 2.5s .15s linear infinite;
+}
+
+.chrome-plugin-gpt-prompt-form-item>a:hover {
+    color: #eee;
+}
+
+@keyframes zy {
+    10% {
+        transform: rotate(5deg);
+    }
+
+    20% {
+        transform: rotate(-3deg);
+    }
+
+    30% {
+        transform: rotate(3deg);
+    }
+
+    40% {
+        transform: rotate(-3deg);
+    }
+
+    50%,
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .chrome-plugin-gpt-prompt-form-check-input {
-    --bs-form-check-bg: var(--bs-form-control-bg);
+    --chrome-plugin-gpt-prompt-form-check-bg: var(--chrome-plugin-gpt-prompt-form-control-bg);
     width: 1em;
     height: 1em;
     margin-top: .25em;
     vertical-align: top;
-    background-color: var(--bs-form-check-bg);
-    background-image: var(--bs-form-check-bg-image);
+    background-color: var(--chrome-plugin-gpt-prompt-form-check-bg);
+    background-image: var(--chrome-plugin-gpt-prompt-form-check-bg-image);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    border: var(--bs-border-width) solid var(--bs-border-color);
+    border: var(--chrome-plugin-gpt-prompt-border-width) solid var(--chrome-plugin-gpt-prompt-border-color);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -620,10 +658,10 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
 }
 
 .chrome-plugin-gpt-prompt-form-check-switch {
-    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.5%29'/%3e%3c/svg%3e");
+    --chrome-plugin-gpt-prompt-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.5%29'/%3e%3c/svg%3e");
     width: 2em;
     margin-left: -2.5em;
-    background-image: var(--bs-form-switch-bg);
+    background-image: var(--chrome-plugin-gpt-prompt-form-switch-bg);
     background-position: left center;
     border-radius: 2em;
     transition: background-position .15s ease-in-out;
@@ -632,5 +670,5 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
 
 .chrome-plugin-gpt-prompt-form-check-switch:checked {
     background-position: right center;
-    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    --chrome-plugin-gpt-prompt-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }

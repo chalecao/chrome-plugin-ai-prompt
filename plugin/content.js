@@ -517,6 +517,9 @@ function setSetting(container) {
         <label class="${clsprefix}-form-check-label" >${getFormMap().switch}</label>
         <input class="${clsprefix}-form-check-input ${clsprefix}-form-check-switch" ${language === 'chinese' ? 'checked' : ''} type="checkbox" role="switch">
     </div>
+    <div class="${clsprefix}-form-item" >
+        <a href="https://github.com/chalecao/chrome-plugin-ai-prompt" data-text="View Github, Thanks for Star!" target="blank">View Github, Thanks for Star!</a>
+    </div>
     `;
     set.querySelector(`.${clsprefix}-form-check-switch`).addEventListener('change', e => {
         e.stopImmediatePropagation();
