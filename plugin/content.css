@@ -296,7 +296,7 @@ body {
     text-align: center;
     color: #999;
     font-size: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .chrome-plugin-gpt-prompt-sub-title {
@@ -365,7 +365,7 @@ body {
     text-align: left;
     color: #ccc;
     font-size: 24px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 0 10px;
     box-sizing: border-box;
 }
@@ -602,19 +602,19 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
 
 }
 
-.chrome-plugin-gpt-prompt-form-item>a {
+.chrome-plugin-gpt-prompt-git {
     color: #ccc;
     font-size: 14px;
     margin-top: 20px;
     text-shadow: 0 0 10px #0ebeff, 0 0 20px #0ebeff, 0 0 50px #0ebeff, 0 0 100px #0ebeff, 0 0 200px #0ebeff;
-    animation: zy 2.5s .15s linear infinite;
+    animation: git-shake 2.5s .15s linear infinite;
 }
 
-.chrome-plugin-gpt-prompt-form-item>a:hover {
+.chrome-plugin-gpt-prompt-git:hover {
     color: #eee;
 }
 
-@keyframes zy {
+@keyframes git-shake {
     10% {
         transform: rotate(5deg);
     }

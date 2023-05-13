@@ -476,6 +476,7 @@ function setIntro(container) {
         container.appendChild(logo);
         if (language === 'chinese') {
             addDesc(container, `
+            <a class="${clsprefix}-git" style="display: inline-block;float: right;" href="https://github.com/chalecao/chrome-plugin-ai-prompt" target="blank">查看Github, 感谢Star!</a>
             <p>Rule1: 编写清晰明确的指令，清晰并不意味着写的简短，要尽量描述完整</p>
             <small>- 使用分隔符，比如 \`\`\`,""",''',--- 等等</small>
             <small>- 可以要求输出结构化信息，比如JSON格式</small>
@@ -491,6 +492,7 @@ function setIntro(container) {
         `);
         } else {
             addDesc(container, `
+            <a class="${clsprefix}-git" style="display: inline-block;float: right;" href="https://github.com/chalecao/chrome-plugin-ai-prompt" target="blank">View Github, Thanks for Star!</a>
             <p>Rule1: Make Clear and specific instructions, clear != short</p>
             <small>- Use delimiters，such as \`\`\`,""",''',--- etc. </small>
             <small>- ask structured output, such as JSON</small>
@@ -518,7 +520,7 @@ function setSetting(container) {
         <input class="${clsprefix}-form-check-input ${clsprefix}-form-check-switch" ${language === 'chinese' ? 'checked' : ''} type="checkbox" role="switch">
     </div>
     <div class="${clsprefix}-form-item" >
-        <a href="https://github.com/chalecao/chrome-plugin-ai-prompt" data-text="View Github, Thanks for Star!" target="blank">View Github, Thanks for Star!</a>
+        <a class="${clsprefix}-git" href="https://github.com/chalecao/chrome-plugin-ai-prompt" target="blank">View Github, Thanks for Star!</a>
     </div>
     `;
     set.querySelector(`.${clsprefix}-form-check-switch`).addEventListener('change', e => {
