@@ -1,5 +1,6 @@
 const clsprefix = 'chrome-plugin-gpt-prompt';
 const language = localStorage.getItem(`${clsprefix}-lang`) || 'chinese';
+const backgroundPageUrl = localStorage.getItem(`${clsprefix}-backgroundPageUrl`) || 'https://cn.bing.com/';
 
 // 创建侧边栏
 var sidebar = document.createElement('div');
@@ -168,7 +169,8 @@ const formMap = {
     'demand': '对输出的要求是什么？',
     'content': '问题的具体内容是什么？',
     'button': '生成Prompt',
-    'switch': '切换到英文'
+    'switch': '切换到英文',
+    'backgroundPageUrl': '背景页地址',
 };
 
 const formMapEnglish = {
@@ -176,7 +178,8 @@ const formMapEnglish = {
     'demand': 'What are the requirements for output?',
     'content': 'What exactly is the question?',
     'button': 'Generate Prompt',
-    'switch': 'Switch Chinese'
+    'switch': 'Switch Chinese',
+    'backgroundPageUrl': 'Background Page Url',
 };
 
 function makeTab(iconTxt, index, needtabIcon = true) {
@@ -264,6 +267,7 @@ function createIframe(src) {
 // document.body.innerHTML = '';
 document.body.appendChild(sidebar);
 document.body.appendChild(containers);
+document.querySelector(`.${clsprefix}-iframe-outside`).src = backgroundPageUrl;
 
 // 初始化选中第一个选项卡
 setActiveTab(0);
@@ -520,6 +524,10 @@ function setSetting(container) {
         <input class="${clsprefix}-form-check-input ${clsprefix}-form-check-switch" ${language === 'chinese' ? 'checked' : ''} type="checkbox" role="switch">
     </div>
     <div class="${clsprefix}-form-item" >
+        <label class="${clsprefix}-form-check-label" >${getFormMap().backgroundPageUrl}</label>
+        <textarea class="chrome-plugin-gpt-prompt-form-control chrome-plugin-gpt-prompt-role ${clsprefix}-backgroundPageUrl">${backgroundPageUrl}</textarea>
+    </div>
+    <div class="${clsprefix}-form-item" >
         <a class="${clsprefix}-git" href="https://github.com/chalecao/chrome-plugin-ai-prompt" target="blank">View Github, Thanks for Star!</a>
     </div>
     `;
@@ -531,6 +539,14 @@ function setSetting(container) {
             localStorage.setItem(`${clsprefix}-lang`, 'english');
         }
         location.reload();
+    });
+    set.querySelector(`.${clsprefix}-backgroundPageUrl`).addEventListener('blur', e => {
+        e.stopImmediatePropagation();
+        let url = e.target.value;
+        if (url && /http[s]?:\/\//.test(url)) {
+            localStorage.setItem(`${clsprefix}-backgroundPageUrl`, e.target.value);
+            document.querySelector(`.${clsprefix}-iframe-outside`).src = e.target.value;
+        }
     });
     container.appendChild(set);
 }

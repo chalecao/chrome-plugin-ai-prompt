@@ -599,7 +599,7 @@ button.chrome-plugin-gpt-prompt-button-primary:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin-bottom: 10px;
 }
 
 .chrome-plugin-gpt-prompt-git {
