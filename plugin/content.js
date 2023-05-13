@@ -29,7 +29,7 @@ const exampleMap = {
     'code-generation': {
         'role': `你是一个前端开发工程师，请遵守前端最佳开发实践，生成代码`,
         'demand': `采用react框架，封装成组件，react和scss代码分开，尽量不要行内样式，语义化生成className，生成index.jsx和index.scss`,
-        'content': `一个卡片组件，高度158px, 宽度310px，点击可以选中商品卡片，选中时卡片边框颜色变成#ff5000，背景色变成rgba(255,80,0,0.03)，点击可以触发自定义点击事件`,
+        'content': `一个卡片组件，高度158px, 宽度310px，点击可以选中卡片，选中时卡片边框颜色变成#ff5000，背景色变成rgba(255,80,0,0.03)，点击可以触发自定义点击事件`,
     },
     'problem-solving': {
         'role': `判断用户给出的答案是否正确`,
@@ -75,7 +75,7 @@ const exampleMapEnglish = {
     'code-generation': {
         'role': `You are a front-end development engineer, please follow front-end best development practices and generate code`,
         'demand': `react framework is adopted and encapsulated into components. react and scss codes are separated, without inline styles, and semantically generated into className and index.jsx and index.scss are generated`,
-        'content': `A card component with a height of 158px and a width of 310px. Click to select the merchandise card. When selected, the border color of the card changes to #ff5000 and the background color changes to rgba(255,80,0,0.03)`,
+        'content': `A card component with a height of 158px and a width of 310px. Click to select the card. When selected, the border color of the card changes to #ff5000 and the background color changes to rgba(255,80,0,0.03)`,
     },
     'problem-solving': {
         'role': `Determine whether the answer given by the user is correct`,
