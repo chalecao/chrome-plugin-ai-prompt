@@ -44,9 +44,5 @@ Propmt 参考教程：
 ## 开发者信息
 AI Prompter是一款开源的Chrome浏览器插件，代码托管在Github上。欢迎大家一起来贡献代码，为更多人提供帮助。
 
-项目地址：https://github.com/chalecao/chrome-plugin-ai-prompt
-开发者：chalecao
-联系邮箱：chh_exe@163.com
-
 ## 许可证
 MIT
