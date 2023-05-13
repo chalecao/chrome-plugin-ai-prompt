@@ -5,15 +5,15 @@ Propmt solution for plug-in implementation Refer To:
 
 ChatGPT Prompt Engineering for Developers -- Chinese version of Ng's Chatgpt Prompt Engineering for Developers course, which teaches developers how to build Prompt and new LLM-based applications based on the OpenAI API, including:
 
-> Writing Prompt principle;
-> Text summary (e.g. summarizing user comments);
-Text inference (e.g., emotion classification, topic extraction);
-> Text conversion (e.g. translation, autocorrect);
-> Extension (e.g. writing an email);
+Writing Prompt principle;
+- Text summary (e.g. summarizing user comments);
+- Text inference (e.g., emotion classification, topic extraction);
+- Text conversion (e.g. translation, autocorrect);
+- Extension (e.g. writing an email);
 
-* * the original English address: [ChatGPT Prompt Engineering for Developers] (https://learn.deeplearning.ai) * *
+the original English address: [ChatGPT Prompt Engineering for Developers](https://learn.deeplearning.ai) 
 
-** Video Address with Chinese subtitles: [Wu En Prompt Engineering course specialized translation version of x OpenAI] (https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web) * *
+Video Address with Chinese subtitles: [Wu En Prompt Engineering course specialized translation version of x OpenAI](https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web)
 
 [中文版本 Readme](./Readme_zh.md)
 
@@ -28,7 +28,7 @@ You can install the AI Prompter plugin in the following ways:
 How to use ##
 Click plug-in to start using, in the left menu
 
-! [](./static/images/posts/2023-05-13-16-30-50.png)
+![](./static/images/posts/2023-05-13-16-30-50.png)
 
 Functional characteristics
 - Supports a variety of AI prompt types, including text summary, code generation, local knowledge, AI bots, etc
